@@ -1,0 +1,177 @@
+.home {
+    margin-bottom: 358px;
+    padding: 112px 0 0;
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 150px 0 0;
+        min-height: 840px;
+        max-height: 840px;
+        border-radius: 32px;
+        background-image: url("../images/home.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    h1 {
+        position: relative;
+        z-index: 5;
+        margin-bottom: 32px;
+        max-width: 996px;
+        text-align: center;
+        color: $white;
+
+        &::after {
+            content: "Mono Cats is a blockchain game IP by Mono Labs";
+            position: absolute;
+            left: 50%;
+            top: 4px;
+            z-index: -1;
+            width: 100%;
+            font-family: "Luckiest Guy", cursive;
+            font-weight: 400;
+            font-size: 80px;
+            line-height: 72px;
+            letter-spacing: normal;
+            color: $red-dark;
+            transform: translateX(-50%);
+        }
+    }
+
+    p {
+        max-width: 494px;
+        text-align: center;
+        color: $white;
+    }
+
+    &__img {
+        position: absolute;
+        left: 50%;
+        bottom: -27%;
+        transform: translateX(-50%);
+    }
+
+    .scroll-down {
+        position: absolute;
+        left: 48px;
+        bottom: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        min-width: fit-content;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 6px;
+            bottom: -6px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: $brown-light;
+            transition: all 0.2s;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: $beige-light;
+            transition: all 0.2s;
+        }
+
+        span {
+            position: absolute;
+            left: -10px;
+            top: -75px;
+            width: max-content;
+            transform: rotate(-90deg);
+        }
+
+        img {
+            z-index: 10;
+            transition: all 0.2s;
+        }
+
+        &:hover::after {
+            left: 4px;
+            top: 4px;
+        }
+
+        &:hover {
+            img {
+                transform: translate(4px, 4px);
+            }
+        }
+    }
+}
+
+.story {
+    position: relative;
+    margin: 0 auto 160px;
+    padding: 120px;
+    width: 100%;
+    max-width: 1320px;
+    border-radius: 32px;
+
+    //background-color: $beige-light;
+    background-color: $orange-light;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 48%;
+        right: 48px;
+        top: 24px;
+        bottom: 24px;
+        z-index: 1;
+        margin: 0 auto;
+        width: 100%;
+        height: 80%;
+        max-width: 1416px;
+        border-radius: 32px;
+        background-color: $beige-light;
+        transform: translateX(-50%);
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__text {
+        z-index: 5;
+        max-width: 476px;
+    }
+
+    &__img {
+        z-index: 5;
+        max-width: 576px;
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+    h2 {
+        margin-bottom: 28px;
+        -webkit-text-stroke: 4px $green-dark;
+        color: $white;
+    }
+
+    h5 {
+        margin-bottom: 24px;
+        line-height: 28px;
+        color: $brown-dark;
+    }
+}
