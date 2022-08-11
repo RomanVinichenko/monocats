@@ -9,6 +9,16 @@
   height: 96px;
   max-width: 1256px;
 
+  .logo {
+    @include m($xl) {
+      max-width: 200px;
+    }
+
+    @include m($lg) {
+      max-width: 144px;
+    }
+  }
+
   .menu {
     display: flex;
     align-items: center;
@@ -28,8 +38,20 @@
 
         + li {
           margin-left: 32px;
+
+          @include m($xl) {
+            margin-left: 20px;
+          }
         }
       }
+
+      @include m($lg) {
+        display: none;
+      }
+    }
+
+    @include m($xl) {
+      padding: 0 17px;
     }
   }
 
@@ -41,5 +63,40 @@
         margin-left: 18px;
       }
     }
+
+    @include m($lg) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    .burger__close,
+    .burger__open {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .burger__close {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    @include m($lg) {
+      display: block;
+    }
+  }
+
+  @include m($lg) {
+    top: 0;
+    height: 64px;
   }
 }
