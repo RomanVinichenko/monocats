@@ -9,12 +9,6 @@ body {
   cursor: default;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 24px;
-  max-width: 1920px;
-}
-
 h1,
 h2,
 h3,
@@ -27,6 +21,11 @@ h1 {
   font-size: 80px;
   line-height: 72px;
   letter-spacing: normal;
+
+  @include m($lg) {
+    font-size: 48px;
+    line-height: 40px;
+  }
 }
 
 h2 {
@@ -34,6 +33,11 @@ h2 {
   font-size: 56px;
   line-height: 56px;
   letter-spacing: 0.04em;
+
+  @include m($lg) {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 h3 {
@@ -48,6 +52,11 @@ h4 {
   font-size: 32px;
   line-height: 32px;
   letter-spacing: 0.04em;
+
+  @include m($lg) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 h5 {
@@ -195,5 +204,54 @@ h5 {
     img {
       transform: translate(4px, 4px);
     }
+  }
+}
+
+.story__img {
+  position: relative;
+  width: 547px;
+  height: 580px;
+}
+
+.story-img {
+  position: absolute;
+}
+
+#story-img-1 {
+  left: -100px;
+  top: -100px;
+}
+
+#story-img-2 {
+  right: -100px;
+  top: -100px;
+}
+
+#story-img-3 {
+  left: 105px;
+  top: 227px;
+}
+
+#story-img-4 {
+  left: -100px;
+  bottom: -100px;
+}
+
+#story-img-5 {
+  right: -100px;
+  bottom: -140px;
+}
+
+.headings {
+  position: relative;
+  margin-bottom: 24px;
+  color: $white;
+
+  h4:not(:first-child),
+  h2:not(:first-child) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
   }
 }

@@ -13,14 +13,28 @@
     bottom: -100px;
     width: 100%;
     transform: scale(1.3);
+
+    @include m($lg) {
+      bottom: 0;
+    }
   }
 
-  h2 {
+  .headings-title {
     margin-bottom: 30px;
     text-align: center;
-    -webkit-text-stroke: 4px $green-dark;
-    text-transform: uppercase;
-    color: $white;
+
+    .stroke {
+      -webkit-text-stroke: 8px $green-dark;
+    }
+
+    h2:not(:first-child) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include m($lg) {
+      margin-bottom: 12px;
+    }
   }
 
   h5 {
@@ -64,6 +78,10 @@
         transform: translate(4px, 4px) rotate(180deg);
       }
     }
+
+    @include m($lg) {
+      display: none;
+    }
   }
 
   &__terms {
@@ -95,6 +113,10 @@
       left: 50%;
       margin: 0 auto;
       transform: translateX(-50%);
+
+      @include m($lg) {
+        display: block;
+      }
     }
 
     .last {
