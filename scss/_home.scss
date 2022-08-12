@@ -120,7 +120,7 @@
 .story {
   position: relative;
   margin: 0 auto 150px;
-  padding: 120px;
+  padding: 120px 100px;
   width: 100%;
   max-width: 1416px;
   border-radius: 32px;
@@ -141,11 +141,30 @@
   &::before {
     bottom: -24px;
     border-radius: 0 0 32px 32px;
+
+    @include m($lg) {
+      bottom: -12px;
+      border-radius: 0 0 16px 16px;
+    }
   }
 
   &::after {
     top: -24px;
     border-radius: 32px 32px 0 0;
+
+    @include m($lg) {
+      top: -12px;
+      border-radius: 16px 16px 0 0;
+    }
+  }
+
+  &__img-mobile {
+    display: none;
+
+    @include m(1400) {
+      display: block;
+      margin-top: 16px;
+    }
   }
 
   &__wrapper {
@@ -158,26 +177,34 @@
     }
   }
 
-  &__img {
+  &__text {
+    z-index: 5;
+    margin-left: 30px;
+    max-width: 476px;
+
+    @include m(1280) {
+      max-width: 380px;
+    }
+
+    @include m($xl) {
+      max-width: 320px;
+    }
+
     @include m($lg) {
-      transform: scale(0.6);
+      margin-left: 0;
+      max-width: 100%;
     }
   }
 
-  &__text {
-    z-index: 5;
-    max-width: 476px;
-  }
-
   .headings-title {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 
     .stroke {
       -webkit-text-stroke: 8px $green-dark;
     }
 
     @include m($lg) {
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
   }
 
@@ -185,10 +212,25 @@
     margin-bottom: 24px;
     line-height: 28px;
     color: $brown-dark;
+
+    @include m($lg) {
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  @include m(1400) {
+    padding: 90px 80px;
+  }
+
+  @include m($xl) {
+    padding: 80px 40px;
   }
 
   @include m($lg) {
     padding: 64px 32px;
+    border-radius: 16px;
   }
 }
 
@@ -299,10 +341,6 @@
     h2:not(:first-child) {
       left: 50%;
       transform: translateX(-50%);
-    }
-
-    @include m($lg) {
-      margin-bottom: 12px;
     }
 
     @include m($lg) {
@@ -549,23 +587,23 @@
 
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
-    max-width: 1176px;
+    max-width: 1200px;
 
     li {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin: 0 12px 24px;
       padding: 47px 0 56px;
       width: 100%;
       max-width: 376px;
       border-radius: 24px;
       background-color: $beige-light;
-
-      &:not(:last-child) {
-        margin-right: 24px;
-      }
 
       h3 {
         margin-bottom: 15px;
