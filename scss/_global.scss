@@ -284,10 +284,23 @@ h5 {
   white-space: nowrap;
 }
 
-.artwork ul li {
-  display: inline-block;
-  min-width: 132px;
-  vertical-align: top;
+.artwork {
+  ul {
+    li {
+      display: inline-block;
+      min-width: 132px;
+      vertical-align: top;
+    }
+    img {
+      @include m(1400) {
+        max-width: 200px;
+      }
+
+      @include m($lg) {
+        max-width: 160px;
+      }
+    }
+  }
 }
 
 .artwork-block-1,
@@ -296,6 +309,19 @@ h5 {
   position: relative;
   margin-bottom: 48px;
   height: 282px;
+
+  @include m(1400) {
+    margin-bottom: 40px;
+    height: 200px;
+  }
+
+  @include m($xl) {
+    margin-bottom: 24px;
+  }
+
+  @include m($lg) {
+    height: 160px;
+  }
 }
 
 .artwork-block-1 ul {

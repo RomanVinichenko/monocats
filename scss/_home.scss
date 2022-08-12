@@ -229,6 +229,7 @@
   }
 
   @include m($lg) {
+    margin: 0 auto 84px;
     padding: 64px 32px;
     border-radius: 16px;
   }
@@ -238,7 +239,7 @@
   margin-bottom: 184px;
 
   .headings-title {
-    margin-bottom: 44px;
+    margin-bottom: 48px;
     text-align: center;
 
     .stroke {
@@ -251,34 +252,35 @@
     }
 
     @include m($lg) {
-      margin-bottom: 12px;
-    }
-
-    @include m($lg) {
       margin-bottom: 32px;
     }
   }
 
   ul {
-    &:not(:last-child) {
-      margin-bottom: 48px;
-    }
-
     li {
       margin: 0 24px;
+      border-radius: 16px;
+
+      @include m(1400) {
+        margin: 0 20px;
+      }
+
+      @include m($xl) {
+        margin: 0 12px;
+      }
     }
 
     img {
-      width: 282px;
-      height: 282px;
       border-radius: 16px;
-      object-fit: contain;
-
-      @include m($xl) {
-        width: 160px;
-        height: 160px;
-      }
     }
+  }
+
+  @include m($xl) {
+    margin-bottom: 150px;
+  }
+
+  @include m($lg) {
+    margin-bottom: 92px;
   }
 }
 
