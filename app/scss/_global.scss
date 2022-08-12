@@ -49,6 +49,11 @@ h3 {
   font-size: 40px;
   line-height: 40px;
   letter-spacing: 0.04em;
+
+  @include m($lg) {
+    font-size: 32px;
+    line-height: 32px;
+  }
 }
 
 h4 {
@@ -288,13 +293,11 @@ h5 {
   bottom: -140px;
 }
 
-.artwork ul {
-  display: block;
-  white-space: nowrap;
-}
-
 .artwork {
   ul {
+    display: block;
+    white-space: nowrap;
+
     li {
       display: inline-block;
       min-width: 132px;

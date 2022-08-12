@@ -660,7 +660,7 @@
 }
 
 .team {
-  margin-bottom: 184px;
+  margin: 0 17px 184px;
 
   &__wrapper {
     display: flex;
@@ -684,30 +684,43 @@
 
       h3 {
         margin-bottom: 15px;
-        max-width: 60%;
+        max-width: 50%;
         text-align: center;
         color: $brown-dark;
+
+        @include m($xl) {
+          margin-bottom: 4px;
+        }
       }
 
       p {
         margin-bottom: 32px;
         color: $orange-dark;
+
+        @include m($xl) {
+          margin-bottom: 24px;
+        }
       }
 
-      @include m($lg) {
-        margin-bottom: 30px;
+      @include m($xl) {
+        margin: 0 8px 15px;
+        padding: 26px 0 40px;
+        max-width: 342px;
       }
-    }
 
-    @include m($lg) {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include m($sm) {
+        margin: 0 0 15px;
+      }
     }
   }
 
   &__img {
     margin-bottom: 40px;
+
+    @include m($xl) {
+      margin-bottom: 24px;
+      max-width: 140px;
+    }
   }
 
   &__social {
@@ -740,7 +753,7 @@
   }
 
   .headings-title {
-    margin-bottom: 44px;
+    margin-bottom: 48px;
     text-align: center;
 
     .stroke {
@@ -753,12 +766,16 @@
     }
 
     @include m($lg) {
-      margin-bottom: 12px;
+      margin-bottom: 24px;
     }
+  }
 
-    @include m($lg) {
-      margin-bottom: 32px;
-    }
+  @include m($xl) {
+    margin: 0 17px 120px;
+  }
+
+  @include m($lg) {
+    margin: 0 17px 65px;
   }
 }
 
