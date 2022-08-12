@@ -785,7 +785,6 @@
   margin: 0 auto 184px;
   padding: 120px;
   max-width: 1417px;
-  overflow: hidden;
   border-radius: 32px;
   background-color: $green-light;
 
@@ -804,11 +803,21 @@
   &::before {
     bottom: -24px;
     border-radius: 0 0 32px 32px;
+
+    @include m($lg) {
+      bottom: -12px;
+      border-radius: 0 0 16px 16px;
+    }
   }
 
   &::after {
     top: -24px;
     border-radius: 32px 32px 0 0;
+
+    @include m($lg) {
+      top: -12px;
+      border-radius: 16px 16px 0 0;
+    }
   }
 
   &__wrapper {
@@ -822,8 +831,13 @@
   }
 
   &__text {
+    margin-left: 30px;
     width: 100%;
     max-width: 480px;
+
+    @include m($lg) {
+      margin-left: 0;
+    }
   }
 
   &__form {
@@ -868,23 +882,19 @@
   }
 
   .headings-title {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
     .stroke {
       -webkit-text-stroke: 8px $red-dark;
     }
-
-    @include m($lg) {
-      margin-bottom: 12px;
-    }
-
-    @include m($lg) {
-      margin-bottom: 32px;
-    }
   }
 
   p {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
   }
 
   .button {
@@ -902,7 +912,17 @@
     }
   }
 
+  @include m(1400) {
+    padding: 90px 80px;
+  }
+
+  @include m($xl) {
+    padding: 80px;
+  }
+
   @include m($lg) {
-    padding: 40px;
+    margin: 0 auto 84px;
+    padding: 64px 32px;
+    border-radius: 16px;
   }
 }
