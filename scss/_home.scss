@@ -269,9 +269,28 @@
     border-radius: 32px 32px 0 0;
   }
 
+  .decor-section1 {
+    position: absolute;
+    left: 6%;
+    top: 40%;
+  }
+
+  .decor-section2 {
+    position: absolute;
+    right: 6%;
+    top: 60%;
+  }
+
   .headings-title {
-    margin-bottom: 24px;
+    position: relative;
+    margin-bottom: 48px;
     text-align: center;
+
+    img {
+      position: absolute;
+      right: 33%;
+      top: 100px;
+    }
 
     .stroke {
       -webkit-text-stroke: 8px $orange-dark;
@@ -304,6 +323,14 @@
   }
 
   .headings-3 {
+    position: relative;
+
+    img {
+      position: absolute;
+      left: -22%;
+      top: -65px;
+    }
+
     .stroke {
       -webkit-text-stroke: 8px #7e6ae7;
     }
@@ -323,6 +350,7 @@
   }
 
   &__box {
+    position: relative;
     padding: 40px;
     width: 100%;
     max-width: 476px;
@@ -341,6 +369,112 @@
     p {
       &:not(:last-child) {
         margin-bottom: 24px;
+      }
+    }
+
+    &:first-child {
+      .img-arrow1 {
+        position: absolute;
+        right: -45%;
+        top: 56%;
+        transform: translateY(-50%);
+      }
+
+      .img-box1 {
+        position: absolute;
+        left: -27%;
+        top: -17%;
+      }
+
+      p:last-child {
+        position: relative;
+
+        img {
+          position: absolute;
+          right: -3%;
+          top: 100%;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .img-arrow2 {
+        position: absolute;
+        left: -68%;
+        top: 60%;
+        transform: translateY(-50%);
+      }
+
+      .img-box2 {
+        position: absolute;
+        right: -13%;
+        top: -20%;
+      }
+
+      p:last-child {
+        position: relative;
+
+        img {
+          position: absolute;
+          right: -3%;
+          top: 100%;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .img-arrow3 {
+        position: absolute;
+        right: -58%;
+        top: 61%;
+        transform: translateY(-50%);
+      }
+
+      .img-box3 {
+        position: absolute;
+        right: -17%;
+        top: -32%;
+      }
+
+      p:last-child {
+        position: relative;
+
+        .decor-star {
+          position: absolute;
+          left: -27%;
+          top: 100px;
+        }
+
+        .decor-head {
+          position: absolute;
+          right: -5%;
+          top: 85%;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      .img-box4-2 {
+        position: absolute;
+        left: -63%;
+        top: 64%;
+        transform: translateY(-50%);
+      }
+
+      .img-box4 {
+        position: absolute;
+        right: 5%;
+        top: -17%;
+      }
+
+      p:last-child {
+        position: relative;
+
+        img {
+          position: absolute;
+          right: -26%;
+          top: 24%;
+        }
       }
     }
 
