@@ -269,9 +269,29 @@
     border-radius: 32px 32px 0 0;
   }
 
+  .decor-section1 {
+    position: absolute;
+    left: 6%;
+    top: 40%;
+  }
+
+  .decor-section2 {
+    position: absolute;
+    right: 6%;
+    top: 60%;
+  }
+
   .headings-title {
-    margin-bottom: 24px;
+    position: relative;
+    margin-bottom: 48px;
     text-align: center;
+
+    &::after {
+      content: url("../images/road-title.png");
+      position: absolute;
+      right: 33%;
+      top: 100px;
+    }
 
     .stroke {
       -webkit-text-stroke: 8px $orange-dark;
@@ -304,6 +324,15 @@
   }
 
   .headings-3 {
+    position: relative;
+
+    &::after {
+      content: url("../images/decor-head1.png");
+      position: absolute;
+      left: -22%;
+      top: -65px;
+    }
+
     .stroke {
       -webkit-text-stroke: 8px #7e6ae7;
     }
@@ -323,6 +352,7 @@
   }
 
   &__box {
+    position: relative;
     padding: 40px;
     width: 100%;
     max-width: 476px;
@@ -341,6 +371,125 @@
     p {
       &:not(:last-child) {
         margin-bottom: 24px;
+      }
+    }
+
+    &:first-child {
+      &::before {
+        content: url("../images/arrow-box-1.svg");
+        position: absolute;
+        right: -45%;
+        top: 56%;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: url("../images/road-box1.png");
+        position: absolute;
+        left: -27%;
+        top: -17%;
+      }
+
+      p:last-child {
+        position: relative;
+
+        &::after {
+          content: url("../images/star-box1.png");
+          position: absolute;
+          right: -3%;
+          top: 100%;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        content: url("../images/arrow-box-2.svg");
+        position: absolute;
+        left: -68%;
+        top: 60%;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: url("../images/road-box2.png");
+        position: absolute;
+        right: -13%;
+        top: -20%;
+      }
+
+      p:last-child {
+        position: relative;
+
+        &::after {
+          content: url("../images/star-box2.png");
+          position: absolute;
+          right: -3%;
+          top: 100%;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        content: url("../images/arrow-box-3.svg");
+        position: absolute;
+        right: -58%;
+        top: 61%;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: url("../images/road-box3.png");
+        position: absolute;
+        right: -17%;
+        top: -32%;
+      }
+
+      p:last-child {
+        position: relative;
+
+        &::before {
+          content: url("../images/star-box3.png");
+          position: absolute;
+          left: -27%;
+          top: 100px;
+        }
+
+        &::after {
+          content: url("../images/decor-head2.png");
+          position: absolute;
+          right: -5%;
+          top: 85%;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      &::before {
+        content: url("../images/road-box4-2.png");
+        position: absolute;
+        left: -63%;
+        top: 64%;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: url("../images/road-box4.png");
+        position: absolute;
+        right: 5%;
+        top: -17%;
+      }
+
+      p:last-child {
+        position: relative;
+
+        &::after {
+          content: url("../images/decor-head3.png");
+          position: absolute;
+          right: -26%;
+          top: 24%;
+        }
       }
     }
 
