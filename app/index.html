@@ -64,12 +64,15 @@
   </section>
   <section class="story">
     <div class="story__wrapper">
+      <div class="story__img-mobile">
+        <img src="images/story-img-mobile.png" alt="">
+      </div>
       <div class="story__img">
         <img id="story-img-1" class="story-img" src="images/story_-1.webp" alt="img">
-        <img id="story-img-2" class="story-img" src="images/story_-2.webp" alt="img">
-        <img id="story-img-3" class="story-img" src="images/story_-3.webp" alt="img">
-        <img id="story-img-4" class="story-img" src="images/story_-4.webp" alt="img">
-        <img id="story-img-5" class="story-img" src="images/story_-5.webp" alt="img">
+        <img id="story-img-2" class="story-img" src="images/story_-5.webp" alt="img">
+        <img id="story-img-3" class="story-img" src="images/story_-4.webp" alt="img">
+        <img id="story-img-4" class="story-img" src="images/story_-3.webp" alt="img">
+        <img id="story-img-5" class="story-img" src="images/story_-2.webp" alt="img">
       </div>
       <div class="story__text">
         <div class="headings headings-title">
@@ -334,6 +337,58 @@
           </a>
         </div>
       </li>
+      <li>
+        <img class="team__img" src="images/team1.png" alt="">
+        <h3>CAROLINA
+          RINCÓN</h3>
+        <p>Code / Social / Illustration</p>
+        <div class="team__social">
+          <a class="team__social-link" href="#">
+            <div class="pressed">
+              <img src="images/twitter.svg" alt="">
+            </div>
+          </a>
+          <a class="team__social-link" href="#">
+            <div class="pressed">
+              <img src="images/discord.svg" alt="">
+            </div>
+          </a>
+        </div>
+      </li><li>
+        <img class="team__img" src="images/team1.png" alt="">
+        <h3>CAROLINA
+          RINCÓN</h3>
+        <p>Code / Social / Illustration</p>
+        <div class="team__social">
+          <a class="team__social-link" href="#">
+            <div class="pressed">
+              <img src="images/twitter.svg" alt="">
+            </div>
+          </a>
+          <a class="team__social-link" href="#">
+            <div class="pressed">
+              <img src="images/discord.svg" alt="">
+            </div>
+          </a>
+        </div>
+      </li><li>
+        <img class="team__img" src="images/team1.png" alt="">
+        <h3>CAROLINA
+          RINCÓN</h3>
+        <p>Code / Social / Illustration</p>
+        <div class="team__social">
+          <a class="team__social-link" href="#">
+            <div class="pressed">
+              <img src="images/twitter.svg" alt="">
+            </div>
+          </a>
+          <a class="team__social-link" href="#">
+            <div class="pressed">
+              <img src="images/discord.svg" alt="">
+            </div>
+          </a>
+        </div>
+      </li>
     </ul>
   </section>
   <section class="subscribe">
@@ -406,39 +461,106 @@
 <script src="js/lax.min.js"></script>
 <script>
   window.onload = function () {
-
     lax.init()
     lax.addDriver(
       "scrollY",
       function () {
         return document.documentElement.scrollTop;
       },
-      {frameStep: 1}
+      { frameStep: 1 }
     );
     lax.addElements("#story-img-1", {
       scrollY: {
-        translateX: [["elInY", "elOutY"], [0, "100"]],
-        translateY: [["elInY", "elOutY"], [0, "100"]]
+        translateX: [["elInY", "elOutY-500"], [0, "100"]],
+        translateY: [["elInY", "elOutY-500"], [0, "100"]]
       }
     });
     lax.addElements("#story-img-2", {
       scrollY: {
-        translateX: [["elInY", "elOutY"], [0, "-100"]],
-        translateY: [["elInY", "elOutY"], [0, "100"]]
+        translateX: [["elInY", "elOutY-500"], [0, "-100"]],
+        translateY: [["elInY", "elOutY-500"], [0, "100"]]
+      }
+    });
+    lax.addElements("#story-img-3", {
+      scrollY: {
+        rotate: [["elInY", "elOutY-500"], ["-45", "0"]],
+
       }
     });
     lax.addElements("#story-img-4", {
       scrollY: {
-        translateX: [["elInY", "elOutY"], [0, "100"]],
-        translateY: [["elInY", "elOutY"], [0, "-100"]]
+        translateX: [["elInY", "elOutY-500"], [0, "100"]],
+        translateY: [["elInY", "elOutY-500"], [0, "-100"]]
       }
     });
     lax.addElements("#story-img-5", {
       scrollY: {
-        translateX: [["elInY", "elOutY"], [0, "-100"]],
-        translateY: [["elInY", "elOutY"], [0, "-100"]]
+        translateX: [["elInY", "elOutY-500"], [0, "-100"]],
+        translateY: [["elInY", "elOutY-500"], [0, "-100"]]
       }
     });
+    lax.addElements("#artwork-ul-1", {
+      scrollY: {
+        translateX: [["elInY", "elOutY"], [0, "-500"]],
+      }
+    });
+    lax.addElements("#artwork-ul-2", {
+      scrollY: {
+        translateX: [["elInY", "elOutY"], [0, "500"]],
+      }
+    });
+    lax.addElements("#artwork-ul-3", {
+      scrollY: {
+        translateX: [["elInY", "elOutY"], [0, "-500"]],
+      }
+    });
+    lax.addElements(".benefits__box-left", {
+      scrollY: {
+        translateX: [["elInY", "elOutY-700"], [-300, "0"]],
+      }
+    });
+    lax.addElements(".benefits__box-right", {
+      scrollY: {
+        translateX: [["elInY", "elOutY-700"], [300, "0"]],
+      }
+    });
+    lax.addElements("#subscribe-img-inner-1", {
+      scrollY: {
+        translateX: [["elInY", "elOutY-500"], [0, "-100"]],
+        translateY: [["elInY", "elOutY-500"], [0, "100"]]
+      }
+    });
+    lax.addElements("#subscribe-img-inner-2", {
+      scrollY: {
+        translateX: [["elInY", "elOutY-500"], [0, "100"]],
+        translateY: [["elInY", "elOutY-500"], [0, "-100"]]
+      }
+    });
+    lax.addElements(".roadmap-box-left", {
+      scrollY: {
+        translateX: [["elInY", "elOutY-700"], [-100, "0"]],
+      }
+    });
+    lax.addElements(".roadmap-box-right", {
+      scrollY: {
+        translateX: [["elInY", "elOutY-700"], [100, "0"]],
+      }
+    });
+    /* lax.addElements(".hero__img", {
+         scrollY: {
+             translateY: [["elInY", "elOutY-700"], [0, "300"]],
+         }
+     });*/
+  }
+  function LinkToTerms(x){
+    if(x==2){
+      event.preventDefault();
+      localStorage.setItem('privacy', 'yes');
+    }else if(x==1){
+      localStorage.setItem('privacy', 'no');
+    }
+    var myStr = document.getElementsByClassName('logo')[0].getAttribute('href') + '/terms-privacy';
+    document.location.href = myStr;
   }
 </script>
 <script src='js/index.min.js'></script>
