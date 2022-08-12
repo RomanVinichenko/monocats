@@ -161,7 +161,7 @@
   &__img-mobile {
     display: none;
 
-    @include m(1400) {
+    @include m(600) {
       display: block;
       margin-top: 16px;
     }
