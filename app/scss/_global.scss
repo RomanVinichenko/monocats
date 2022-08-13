@@ -428,12 +428,14 @@ h5 {
   height: 570px;
 
   @include m($xl) {
+    margin-bottom: 40px;
     width: 400px;
     height: 400px;
   }
 
-  @include m($xl) {
-    margin-bottom: 40px;
+  @include m(600) {
+    width: 280px;
+    height: 280px;
   }
 }
 
@@ -448,6 +450,10 @@ h5 {
   @include m($xl) {
     max-width: 280px;
   }
+
+  @include m(600) {
+    max-width: 215px;
+  }
 }
 
 #subscribe-img-inner-2 {
@@ -457,6 +463,10 @@ h5 {
   @include m($xl) {
     max-width: 280px;
   }
+
+  @include m(600) {
+    max-width: 215px;
+  }
 }
 
 .roadmap-box-left {
@@ -465,4 +475,8 @@ h5 {
 
 .roadmap-box-right {
   transform: translate(100px);
+}
+
+.wpcf7-spinner {
+  position: absolute;
 }
