@@ -1,16 +1,78 @@
 .hero {
+  position: relative;
   margin: 112px 24px 358px;
-  padding: 150px 0 0;
-  min-height: 840px;
-  max-height: 840px;
-  overflow-x: hidden;
+  padding: 5% 0 27%;
   border-radius: 32px;
   background-image: url("../images/home.svg");
   background-size: cover;
 
-  .scroll-down {
+  &__rotate {
+    position: absolute;
+    right: 15%;
+    top: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 50%;
+    transform: translateX(50%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 2;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: $white;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 160px;
+      height: 160px;
+      background-image: linear-gradient(180deg, #00b049 0%, #00a2ac 52.6%, #005a8d 100%);
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 5;
+      animation: rotating 28s linear infinite;
+    }
+
+    span {
+      z-index: 3;
+      display: block;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: -0.02em;
+      color: $green-dark;
+    }
+
+    &:hover {
+      transform: scale(1);
+    }
+
+    @include m($xl) {
+      right: 10%;
+      transform: scale(0.9) translateX(50%);
+    }
+
     @include m($lg) {
-      display: none;
+      right: 50%;
+      top: 100%;
+      transform: scale(0.7) translateX(70%);
     }
   }
 
@@ -19,7 +81,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
   }
 
   h1 {
@@ -47,13 +108,18 @@
 
       @include m($lg) {
         padding: 0 32px;
-        font-size: 48px;
+        font-size: 44px;
         line-height: 40px;
       }
     }
 
     @include m($lg) {
       padding: 0 32px;
+      font-size: 44px;
+    }
+
+    @include m($md) {
+      margin-bottom: 12px;
     }
   }
 
@@ -70,50 +136,56 @@
   &__img {
     position: absolute;
     left: 50%;
-    top: 62%;
+    bottom: -17%;
     z-index: 2;
     max-width: 80%;
     transform: translateX(-50%);
 
-    @include m($xl) {
-      top: 65%;
-    }
-
     @include m($lg) {
-      left: auto;
-      top: 45%;
-      transform: scale(1.14);
+      max-width: 100%;
     }
 
     @include m($md) {
-      top: 45%;
+      max-width: 115%;
     }
 
     @include m($sm) {
-      top: 55%;
+      max-width: 130%;
+    }
+  }
+
+  .scroll-down {
+    @include m($lg) {
+      display: none;
     }
   }
 
   @include m($xl) {
-    margin: 112px 24px 358px;
-    min-height: 750px;
-    max-height: 750px;
+    margin: 112px 24px 300px;
+    padding: 8% 0 40%;
   }
 
   @include m($lg) {
-    margin: 64px 16px 358px;
-    padding: 100px 0 0;
-    min-height: 550px;
-    max-height: 550px;
+    margin: 64px 17px 200px;
+    padding: 10% 0 45%;
   }
 
   @include m($md) {
-    margin: 64px 16px 258px;
-    padding: 32px 0 0;
+    padding: 10% 0 60%;
   }
 
   @include m($sm) {
-    margin: 64px 16px 158px;
+    padding: 10% 0 70%;
+  }
+
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg) scale(0.95);
+    }
+
+    to {
+      transform: rotate(360deg) scale(0.95);
+    }
   }
 }
 
