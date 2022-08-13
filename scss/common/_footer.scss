@@ -35,6 +35,18 @@
     .last {
       margin-left: auto;
 
+      span {
+        border-bottom: 1px solid transparent;
+        line-height: 14px;
+        transition: 0.3s;
+      }
+
+      &:hover {
+        span {
+          border-bottom: 1px solid $brown-light;
+        }
+      }
+
       @include m($lg) {
         margin: 0 auto;
         width: fit-content;

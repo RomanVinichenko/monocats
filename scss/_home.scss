@@ -238,7 +238,8 @@
 
 .artwork {
   margin-bottom: 184px;
-  overflow: hidden;
+  padding: 5px 0;
+  overflow-x: hidden;
 
   .headings-title {
     margin-bottom: 48px;
@@ -516,8 +517,8 @@
 
 .benefits {
   margin: 0 auto 160px;
-  padding: 0 17px;
-  overflow: hidden;
+  padding: 5px 17px;
+  overflow-x: hidden;
 
   img {
     width: 88px;
@@ -884,6 +885,8 @@
 
     input {
       position: absolute;
+      left: 0;
+      top: 0;
       z-index: 10;
       opacity: 0;
       width: 100%;
