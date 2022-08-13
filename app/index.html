@@ -15,33 +15,47 @@
     <a class="logo" href="#">
       <img src="images/logo.svg" alt="Logo">
     </a>
-    <ul>
-      <li class="menu__active">
-        <a href="#">Story</a>
-      </li>
-      <li>
-        <a href="#">Artwork</a>
-      </li>
-      <li>
-        <a href="#">Roadmap</a>
-      </li>
-      <li>
-        <a href="#">Team</a>
-      </li>
-      <li>
-        <a href="#">Subscribe</a>
-      </li>
-      <li>
-        <a href="#">Social bar</a>
-      </li>
-    </ul>
-    <div class="header__buttons">
-      <a class="button button--green" href="#">
-        <span>Matrixmarket</span>
-      </a>
-      <a class="button button--red" href="#">
-        <span>Blocktobay</span>
-      </a>
+    <div class="menu__bunch">
+      <ul>
+        <li class="menu__active">
+          <a href="#">Story</a>
+        </li>
+        <li>
+          <a href="#">Artwork</a>
+        </li>
+        <li>
+          <a href="#">Roadmap</a>
+        </li>
+        <li>
+          <a href="#">Team</a>
+        </li>
+        <li>
+          <a href="#">Subscribe</a>
+        </li>
+        <li>
+          <a href="#">Social bar</a>
+        </li>
+      </ul>
+      <div class="header__buttons">
+        <a class="button button--green" href="#">
+          <span>Matrixmarket</span>
+        </a>
+        <a class="button button--red" href="#">
+          <span>Blocktobay</span>
+        </a>
+      </div>
+      <div class="team__social">
+        <a class="team__social-link" href="#">
+          <div class="pressed">
+            <img src="images/twitter.svg" alt="">
+          </div>
+        </a>
+        <a class="team__social-link" href="#">
+          <div class="pressed">
+            <img src="images/discord.svg" alt="">
+          </div>
+        </a>
+      </div>
     </div>
     <button class="header__burger">
       <img class="burger__open" src="images/burger-open.svg" alt="">
@@ -62,33 +76,35 @@
       <span>Scroll down</span>
     </a>
   </section>
-  <section class="story">
-    <div class="story__wrapper">
-      <div class="story__img-mobile">
-        <img src="images/story-img-mobile.png" alt="">
-      </div>
-      <div class="story__img">
-        <img id="story-img-1" class="story-img" src="images/story_-1.webp" alt="img">
-        <img id="story-img-2" class="story-img" src="images/story_-5.webp" alt="img">
-        <img id="story-img-3" class="story-img" src="images/story_-4.webp" alt="img">
-        <img id="story-img-4" class="story-img" src="images/story_-3.webp" alt="img">
-        <img id="story-img-5" class="story-img" src="images/story_-2.webp" alt="img">
-      </div>
-      <div class="story__text">
-        <div class="headings headings-title">
-          <h2 class="stroke">Story</h2>
-          <h2>Story</h2>
+  <div class="container">
+    <section class="story">
+      <div class="story__wrapper">
+        <div class="story__img-mobile">
+          <img src="images/story-img-mobile.png" alt="">
         </div>
-        <h5>Mono Cats is a blockchain game IP by Mono Labs, which consists of 12,500 unique cats NFT and multiple
-          games.</h5>
-        <p>
-          The NFt is published on Flow blockchain. Each Mono Cats NFT is made up of different parts and has a unique
-          visual identity. Holders of NFTs can participate in subsequent games in the Mono Cats series and receive
-          exclusive props and benefits in the games.
-        </p>
+        <div class="story__img">
+          <img id="story-img-1" class="story-img" src="images/story_-1.webp" alt="img">
+          <img id="story-img-2" class="story-img" src="images/story_-5.webp" alt="img">
+          <img id="story-img-3" class="story-img" src="images/story_-4.webp" alt="img">
+          <img id="story-img-4" class="story-img" src="images/story_-3.webp" alt="img">
+          <img id="story-img-5" class="story-img" src="images/story_-2.webp" alt="img">
+        </div>
+        <div class="story__text">
+          <div class="headings headings-title">
+            <h2 class="stroke">Story</h2>
+            <h2>Story</h2>
+          </div>
+          <h5>Mono Cats is a blockchain game IP by Mono Labs, which consists of 12,500 unique cats NFT and multiple
+            games.</h5>
+          <p>
+            The NFt is published on Flow blockchain. Each Mono Cats NFT is made up of different parts and has a unique
+            visual identity. Holders of NFTs can participate in subsequent games in the Mono Cats series and receive
+            exclusive props and benefits in the games.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
   <section class="artwork">
     <div class="headings headings-title">
       <h2 class="stroke">Artwork</h2>
@@ -443,15 +459,15 @@
     </a>
   </div>
 </footer>
-<!--<div class="cookie">-->
-<!--  <p>We use our own cookies, as well as those of third parties, for individual as well as repeated sessions</p>-->
-<!--  <button class="button button&#45;&#45;white">-->
-<!--    <span>Accept cookies</span>-->
-<!--  </button>-->
-<!--  <div class="cookie__close">-->
-<!--    <img src="images/cookie-close.svg" alt="">-->
-<!--  </div>-->
-<!--</div>-->
+<div class="cookie">
+  <p>We use our own cookies, as well as those of third parties, for individual as well as repeated sessions</p>
+  <button class="button button--white">
+    <span>Accept cookies</span>
+  </button>
+  <div class="cookie__close">
+    <img src="images/cookie-close.svg" alt="">
+  </div>
+</div>
 <script src="js/lax.min.js"></script>
 <script>
   window.onload = function () {
@@ -478,7 +494,6 @@
     lax.addElements("#story-img-3", {
       scrollY: {
         rotate: [["elInY", "elOutY-500"], ["-45", "0"]],
-
       }
     });
     lax.addElements("#story-img-4", {
@@ -540,11 +555,67 @@
         translateX: [["elInY", "elOutY-700"], [100, "0"]],
       }
     });
+    lax.addElements(".roadmap-star", {
+      scrollY: {
+        scale: [["elInY", "elOutY-500"], ["0.6", "1.2"]],
+      }
+    });
+    lax.addElements(".img-box1", {
+      scrollY: {
+        rotate: [["elInY", "elOutY-500"], ["-45", "0"]],
+      }
+    });
+    lax.addElements(".img-box2", {
+      scrollY: {
+        rotate: [["elInY", "elOutY-500"], ["45", "0"]],
+      }
+    });
+    lax.addElements(".img-box3", {
+      scrollY: {
+        rotate: [["elInY", "elOutY-500"], ["-45", "0"]],
+      }
+    });
+    lax.addElements(".img-box4", {
+      scrollY: {
+        rotate: [["elInY", "elOutY-500"], ["45", "0"]],
+      }
+    });
+    lax.addElements(".img-box4-2", {
+      scrollY: {
+        rotate: [["elInY", "elOutY-500"], ["-45", "0"]],
+      }
+    });
+
     /* lax.addElements(".hero__img", {
          scrollY: {
              translateY: [["elInY", "elOutY-700"], [0, "300"]],
          }
      });*/
+
+    if (localStorage.getItem('go-to-section') != null) {
+      let myStr = localStorage.getItem('go-to-section');
+      localStorage.setItem('go-to-section', null);
+      GoTo(myStr);
+    }
+  }
+  let header = document.querySelector(".header");
+  window.addEventListener('scroll', function () {
+    let scrollPos = window.scrollY;
+
+    if (header && scrollPos > 10) {
+      header.classList.add("header--active");
+    } else {
+      header.classList.remove("header--active");
+    }
+  });
+
+  function GoTo(x) {
+    $("html, body").animate({
+      scrollTop: $(x).offset().top - 60
+    }, {
+      duration: 400,   // по умолчанию «400»
+      easing: "linear" // по умолчанию «swing»
+    });
   }
 
   function LinkToTerms(x) {
@@ -558,17 +629,15 @@
     document.location.href = myStr;
   }
 
-  let header = document.querySelector(".header");
+  const burger = document.querySelector('.header__burger');
+  const menuMobile = document.querySelector('.menu__bunch');
 
-  window.addEventListener('scroll', function () {
-    let scrollPos = window.scrollY;
-
-    if (header && scrollPos > 10) {
-      header.classList.add("header--active");
-    } else {
-      header.classList.remove("header--active");
-    }
-  });
+  if (burger) {
+    burger.addEventListener('click', function () {
+      burger.classList.toggle('header__burger--active');
+      menuMobile.classList.toggle('menu__bunch--active');
+    });
+  }
 </script>
 <script src='js/index.min.js'></script>
 </body>
