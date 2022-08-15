@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.min.css"/>
 </head>
 
-<body>
+<body id="body">
 <header class="header">
   <nav class="menu">
     <a class="logo" href="#">
@@ -65,6 +65,10 @@
 </header>
 <main class="main">
   <section class="hero">
+    <span class="span-1"></span>
+    <span class="span-2"></span>
+    <span class="span-3"></span>
+    <span class="span-4"></span>
     <div class="hero__wrapper">
       <div class="hero__rotate">
         <span>12,500
@@ -76,13 +80,13 @@
         velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
       <img class="hero__img" src="images/home.png" alt="Home img">
     </div>
-    <a class="scroll-down" href="#">
+    <a class="scroll-down go-link" href="#story">
       <img src="images/arrow.svg" alt="">
       <span>Scroll down</span>
     </a>
   </section>
   <div class="container">
-    <section class="story">
+    <section class="story" id="story">
       <div class="story__wrapper">
         <div class="story__img-mobile">
           <img src="images/story-img-mobile.png" alt="">
@@ -496,10 +500,9 @@
         </a>
       </div>
   </div>
-
   <img class="footer__bg" src="images/footer.png" alt="">
   <img class="footer__bg-mobile" src="images/footer-mobile.png" alt="">
-  <a class="scroll-down" href="#">
+  <a class="scroll-down go-link" href="#body">
     <img src="images/arrow.svg" alt="">
     <span>Top</span>
   </a>
@@ -710,10 +713,23 @@
     });
   }
 
+  document.querySelectorAll('.go-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
 </script>
 <script src="js/wow.min.js"></script>
 <script>
-  new WOW().init();
+  $( document ).ready(function() {
+    if(document.documentElement.clientWidth>1024){
+      new WOW().init();
+    }
+  });
 </script>
 <script src='js/index.min.js'></script>
 </body>

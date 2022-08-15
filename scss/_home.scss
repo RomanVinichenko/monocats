@@ -2,9 +2,62 @@
   position: relative;
   margin: 112px 24px 358px;
   padding: 5% 0 27%;
+  min-height: 80vh;
+  overflow: hidden;
   border-radius: 32px;
-  background-image: url("../images/home.svg");
-  background-size: cover;
+  background-color: $red-light;
+
+  .span-1 {
+    position: absolute;
+    right: 0;
+    top: -10%;
+    display: block;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background-image: radial-gradient(217.68% 217.68% at 27.97% 49.05%, #5ac2fd 0%, #5ab8fd 100%);
+    filter: blur(100px);
+    animation: circle1 8s linear infinite;
+  }
+
+  .span-2 {
+    position: absolute;
+    left: 0;
+    top: -10%;
+    display: block;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background-image: radial-gradient(158.99% 50% at 50% 50%, #816cff 0%, rgba(115, 92, 255, 0.37) 100%);
+    filter: blur(100px);
+    animation: circle2 8s linear infinite;
+  }
+
+  .span-3 {
+    position: absolute;
+    left: 0;
+    bottom: -10%;
+    display: block;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background-color: #ffdea5;
+    filter: blur(100px);
+    animation: circle3 8s linear infinite;
+  }
+
+  .span-4 {
+    position: absolute;
+    right: 0;
+    bottom: -10%;
+    display: block;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background-color: #cbee99;
+    filter: blur(100px);
+    animation: circle4 8s linear infinite;
+  }
 
   &__rotate {
     position: absolute;
@@ -176,6 +229,94 @@
     padding: 10% 0 70%;
   }
 
+  @keyframes circle1 {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+
+    25% {
+      transform: translateX(10%) translateY(0);
+    }
+
+    50% {
+      transform: translateX(10%) translateY(-10%);
+    }
+
+    75% {
+      transform: translateX(0) translateY(-10%);
+    }
+
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  @keyframes circle2 {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+
+    25% {
+      transform: translateX(10%) translateY(-10%);
+    }
+
+    50% {
+      transform: translateX(0) translateY(-10%);
+    }
+
+    75% {
+      transform: translateX(10%) translateY(-10%);
+    }
+
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  @keyframes circle3 {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+
+    25% {
+      transform: translateX(0) translateY(10%);
+    }
+
+    50% {
+      transform: translateX(-10%) translateY(0);
+    }
+
+    75% {
+      transform: translateX(10%) translateY(-10%);
+    }
+
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  @keyframes circle4 {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+
+    25% {
+      transform: translateX(0) translateY(10%);
+    }
+
+    50% {
+      transform: translateX(10%) translateY(10%);
+    }
+
+    75% {
+      transform: translateX(-10) translateY(-10%);
+    }
+
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+
   @keyframes rotating {
     from {
       transform: rotate(0deg) scale(0.95);
@@ -272,7 +413,7 @@
 
   .headings-title {
     margin-bottom: 32px;
-    padding-left: 5px;
+    padding: 5px 0 0 5px;
     overflow: hidden;
 
     .stroke {
@@ -285,6 +426,7 @@
 
     h2:not(:first-child) {
       left: 5px;
+      top: 5px;
     }
 
     @include m($lg) {
@@ -1117,6 +1259,7 @@
 
   .button {
     position: relative;
+    margin-top: 30px;
     width: fit-content;
     cursor: pointer;
 
