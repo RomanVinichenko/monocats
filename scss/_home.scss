@@ -135,10 +135,12 @@
   h1 {
     position: relative;
     z-index: 5;
+    opacity: 0;
     margin-bottom: 32px;
     max-width: 996px;
     text-align: center;
     color: $white;
+    animation: hero 1s forwards;
 
     &::after {
       content: "Mono Cats is a blockchain game IP by Mono Labs";
@@ -173,9 +175,11 @@
   }
 
   p {
+    opacity: 0;
     max-width: 494px;
     text-align: center;
     color: $white;
+    animation: hero 1.3s 0.5s forwards;
 
     @include m($lg) {
       padding: 0 15px;
@@ -188,7 +192,7 @@
     right: auto;
     top: 20%;
     bottom: 0;
-    z-index: 2;
+    z-index: 10;
     margin: 0 auto;
     max-width: 80%;
 
@@ -201,6 +205,7 @@
     }
 
     @include m($sm) {
+      top: 30%;
       max-width: 130%;
     }
   }
@@ -213,7 +218,8 @@
 
   @include m($xl) {
     margin: 112px 24px 300px;
-    padding: 8% 0 40%;
+    padding: 8% 0 27%;
+    min-height: 60vh;
   }
 
   @include m($lg) {
@@ -222,11 +228,25 @@
   }
 
   @include m($md) {
+    margin: 64px 17px 100px;
     padding: 10% 0 60%;
   }
 
   @include m($sm) {
-    padding: 10% 0 70%;
+    padding: 10% 0 80%;
+    min-height: 70vh;
+  }
+
+  @keyframes hero {
+    from {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes circle1 {
