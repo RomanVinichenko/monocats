@@ -85,16 +85,11 @@
     }
   }
 
-  .hide {
-    .wow {
-      animation: fade 1s  forwards;
-    }
-  }
-
   &__img {
     z-index: -1;
     margin: 0 auto 92px;
     width: fit-content;
+    animation: fade 1s forwards;
 
     @include m($xl) {
       margin: 0 auto 70px;
@@ -138,15 +133,12 @@
     }
 
     h2 {
-      animation: fade 1s;
+      min-width: max-content;
+      animation: fade 1s forwards;
     }
 
     .stroke {
       -webkit-text-stroke: 8px $green-dark;
-    }
-
-    h2 {
-      min-width: max-content;
     }
 
     @include m($lg) {
@@ -160,6 +152,7 @@
     width: 100%;
     max-width: 548px;
     text-align: center;
+    animation: fade 1s forwards;
 
     @include m($lg) {
       margin: 0 auto 24px;
@@ -170,6 +163,7 @@
     z-index: 10;
     justify-content: center;
     padding: 10px 0;
+    animation: fade 1s forwards;
   }
 
   .team__social-link {

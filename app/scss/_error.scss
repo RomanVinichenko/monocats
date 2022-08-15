@@ -3,47 +3,58 @@
 
   &__wrapper {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 112px 24px 0;
-    height: 80vh;
+    min-height: 70vh;
     border-radius: 32px;
     background-image: url("../images/home.svg");
     background-size: cover;
     background-repeat: no-repeat;
+  }
 
-    @include m($lg) {
-      height: 80vh;
+  &__inner {
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: 68%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+
+    @include m($md) {
+      top: 50%;
     }
   }
 
   img {
-    position: absolute;
-    left: 50%;
-    top: 0;
     margin: 0 auto;
-    transform: translate(-50%, -10%) scale(0.8);
+    transform: scale(0.7) translateY(-18%);
 
     @include m($xl) {
-      transform: translate(-50%, -10%) scale(0.6);
+      transform: scale(0.6) translateY(-18%);
+    }
+
+    @include m($md) {
+      display: block;
+      width: 500px !important;
     }
   }
 
   .headings {
-    position: absolute;
-    left: 50%;
-    top: 70%;
-    margin: 0 auto 16px;
-    height: fit-content;
-    max-width: 452px;
+    max-width: 492px;
     font-size: 32px;
     line-height: 32px;
-    text-align: center;
-    transform: translateX(-50%);
 
     .stroke {
       -webkit-text-stroke: 4px $red-dark;
     }
 
     h4 {
+      padding: 0 20px;
       text-align: center;
     }
 
@@ -52,13 +63,14 @@
       left: 0;
       transform: translateX(0);
     }
+
+    @include m($md) {
+      top: 65%;
+    }
   }
 
   .header__buttons {
-    position: absolute;
-    left: 50%;
-    bottom: 6%;
-    transform: translateX(-50%);
+    margin: 0 auto;
 
     .button {
       margin: 0;
