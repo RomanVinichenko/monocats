@@ -565,13 +565,13 @@
 
   .decor-section1 {
     position: absolute;
-    left: 6%;
+    left: 16%;
     top: 40%;
   }
 
   .decor-section2 {
     position: absolute;
-    right: 6%;
+    right: 16%;
     top: 60%;
   }
 
@@ -669,6 +669,7 @@
 
   &__box {
     position: relative;
+    z-index: 10;
     padding: 40px;
     width: 100%;
     max-width: 476px;
@@ -715,6 +716,10 @@
         position: absolute;
         left: -27%;
         top: -17%;
+
+        @include m($md) {
+          width: 30%;
+        }
       }
     }
 
@@ -730,6 +735,10 @@
         position: absolute;
         right: -13%;
         top: -20%;
+
+        @include m($md) {
+          width: 30%;
+        }
       }
     }
 
@@ -745,6 +754,10 @@
         position: absolute;
         right: -17%;
         top: -32%;
+
+        @include m($md) {
+          width: 30%;
+        }
       }
     }
 
@@ -754,12 +767,20 @@
         left: -63%;
         top: 64%;
         transform: translateY(-50%);
+
+        @include m($md) {
+          width: 30%;
+        }
       }
 
       .img-box4 {
         position: absolute;
         right: 5%;
         top: -17%;
+
+        @include m($md) {
+          width: 20%;
+        }
       }
     }
 
@@ -928,6 +949,7 @@
   }
 
   @include m($lg) {
+    display: none;
     margin: 0 auto 80px;
   }
 }
