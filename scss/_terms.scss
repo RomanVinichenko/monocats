@@ -1,6 +1,7 @@
 .terms {
+  position: relative;
   margin: 0 auto 160px;
-  padding-top: 152px;
+  padding-top: 266px;
   width: 100%;
   max-width: 1175px;
 
@@ -17,6 +18,11 @@
     @include m($lg) {
       font-size: 40px;
       line-height: 40px;
+    }
+
+    @include m($md) {
+      font-size: 32px;
+      line-height: 32px;
     }
   }
 
@@ -38,14 +44,20 @@
     color: $gray-dark;
   }
 
+  @include m($lg) {
+    padding-top: 202px;
+  }
+}
+
+.terms-block {
   .footer__terms {
-    position: relative;
+    position: absolute;
     left: 0;
-    bottom: 0;
-    justify-content: center;
+    top: 152px;
     margin: 0 auto 48px;
     padding: 12px 16px 18px;
     width: fit-content;
+    height: fit-content;
     border-radius: 32px;
     background-color: $beige-light;
 
@@ -53,6 +65,24 @@
       position: relative;
       left: 0;
       transform: none;
+
+      .button:last-child {
+        @include m($sm) {
+          margin-left: 9px;
+        }
+      }
+
+      .button {
+        padding: 0 12px;
+      }
+    }
+
+    @include m($lg) {
+      top: 88px;
+    }
+
+    @include m($sm) {
+      padding: 4px 12px 10px 6px;
     }
   }
 }

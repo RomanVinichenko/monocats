@@ -15,41 +15,62 @@
     <a class="logo" href="#">
       <img src="images/logo.svg" alt="Logo">
     </a>
-    <ul>
-      <li>
-        <a href="#">Story</a>
-      </li>
-      <li>
-        <a href="#">Artwork</a>
-      </li>
-      <li>
-        <a href="#">Roadmap</a>
-      </li>
-      <li>
-        <a href="#">Team</a>
-      </li>
-      <li>
-        <a href="#">Subscribe</a>
-      </li>
-      <li>
-        <a href="#">Social bar</a>
-      </li>
-    </ul>
-    <div class="header__buttons">
-      <button class="button button--green">
-        <span>Matrixmarket</span>
-      </button>
-      <button class="button button--red">
-        <span>Blocktobay</span>
-      </button>
+    <div class="menu__bunch">
+      <ul>
+        <li class="menu__active">
+          <a href="#">Story</a>
+        </li>
+        <li>
+          <a href="#">Artwork</a>
+        </li>
+        <li>
+          <a href="#">Roadmap</a>
+        </li>
+        <li>
+          <a href="#">Team</a>
+        </li>
+        <li>
+          <a href="#">Subscribe</a>
+        </li>
+        <li>
+          <a href="#">Social bar</a>
+        </li>
+      </ul>
+      <div class="header__buttons">
+        <a class="button button--green" href="#">
+          <span>Matrixmarket</span>
+        </a>
+        <a class="button button--red" href="#">
+          <span>Blocktobay</span>
+        </a>
+      </div>
+      <div class="team__social">
+        <a class="team__social-link" href="#">
+          <div class="pressed">
+            <img src="images/twitter.svg" alt="">
+          </div>
+        </a>
+        <a class="team__social-link" href="#">
+          <div class="pressed">
+            <img src="images/discord.svg" alt="">
+          </div>
+        </a>
+      </div>
     </div>
+    <button class="header__burger">
+      <img class="burger__open" src="images/burger-open.svg" alt="">
+      <img class="burger__close" src="images/burger-close.svg" alt="">
+    </button>
   </nav>
 </header>
 <main class="main">
   <section class="error">
     <div class="error__wrapper">
       <img src="images/error.png" alt="">
-      <h4>Page not found or temporarily missing. Please go to</h4>
+      <div class="headings headings-title">
+        <h4 class="stroke">Page not found or temporarily missing. Please go to</h4>
+        <h4>Page not found or temporarily missing. Please go to</h4>
+      </div>
       <div class="header__buttons">
         <button class="button">
           <span>Home page</span>
@@ -60,7 +81,10 @@
 </main>
 <footer class="footer">
   <img class="footer__img" src="images/mono.svg" alt="">
-  <h2>JOIN US!</h2>
+  <div class="headings headings-title">
+    <h2 class="stroke">JOIN US!</h2>
+    <h2>JOIN US!</h2>
+  </div>
   <h5>
     If two heads are better than one, 6.666 heads should be way better! join our community.
   </h5>
@@ -77,12 +101,13 @@
     </a>
   </div>
   <img class="footer__bg" src="images/footer.png" alt="">
+  <img class="footer__bg-mobile" src="images/footer-mobile.png" alt="">
   <a class="scroll-down" href="#">
     <img src="images/arrow.svg" alt="">
     <span>Top</span>
   </a>
   <div class="footer__terms">
-    <div class="header__buttons">
+    <div class="footer__buttons">
       <button class="button button--white">
         <span>Terms & conditions</span>
       </button>
@@ -90,13 +115,11 @@
         <span>Privacy Policy</span>
       </button>
     </div>
-    <button class="button button--white last">
+    <a class="button button--white last" href="#">
       <span>designed by: Celerart</span>
-    </button>
+    </a>
   </div>
 </footer>
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>-->
 <script src='js/index.min.js'></script>
 </body>
 

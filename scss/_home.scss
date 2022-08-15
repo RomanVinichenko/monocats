@@ -60,10 +60,6 @@
       color: $green-dark;
     }
 
-    &:hover {
-      transform: scale(1);
-    }
-
     @include m($xl) {
       right: 10%;
       transform: scale(0.9) translateX(50%);
@@ -135,11 +131,12 @@
 
   &__img {
     position: absolute;
-    left: 50%;
+    left: auto;
+    right: auto;
     bottom: -17%;
     z-index: 2;
+    margin: 0 auto;
     max-width: 80%;
-    transform: translateX(-50%);
 
     @include m($lg) {
       max-width: 100%;
@@ -244,6 +241,10 @@
     align-items: center;
     justify-content: space-between;
 
+    img {
+      max-width: 300px;
+    }
+
     @include m($lg) {
       flex-direction: column-reverse;
     }
@@ -270,6 +271,7 @@
 
   .headings-title {
     margin-bottom: 32px;
+    padding-left: 5px;
     overflow: hidden;
 
     .stroke {
@@ -277,7 +279,11 @@
     }
 
     h2 {
-      animation: fade 0.8s;
+      animation: fade 1s;
+    }
+
+    h2:not(:first-child) {
+      left: 5px;
     }
 
     @include m($lg) {
@@ -285,10 +291,19 @@
     }
   }
 
+  .hide {
+    p {
+      opacity: 0;
+      animation: fade 1s 0.4s forwards;
+    }
+  }
+
   h5 {
+    opacity: 0;
     margin-bottom: 24px;
     line-height: 28px;
     color: $brown-dark;
+    animation: fade 1s 0.2s forwards;
 
     @include m($lg) {
       margin-bottom: 8px;
@@ -311,16 +326,6 @@
     width: 95%;
     border-radius: 16px;
   }
-
-  @keyframes fade {
-    from {
-      transform: translateY(200%);
-    }
-
-    to {
-      transform: translateY(0);
-    }
-  }
 }
 
 .artwork {
@@ -330,6 +335,7 @@
 
   .headings-title {
     margin-bottom: 48px;
+    overflow: hidden;
     text-align: center;
 
     .stroke {
@@ -337,8 +343,11 @@
     }
 
     h2:not(:first-child) {
-      left: 50%;
-      transform: translateX(-50%);
+      margin: 0 auto;
+    }
+
+    h2 {
+      animation: fade 1s;
     }
 
     @include m($lg) {
@@ -428,7 +437,17 @@
   .headings-title {
     position: relative;
     margin-bottom: 48px;
+    padding: 0 5px;
+    overflow: hidden;
     text-align: center;
+
+    h2:not(:first-child) {
+      margin: 0 auto;
+    }
+
+    h2 {
+      animation: fade 1s;
+    }
 
     img {
       position: absolute;
@@ -440,19 +459,36 @@
       -webkit-text-stroke: 8px $orange-dark;
     }
 
-    h2:not(:first-child) {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
     @include m($lg) {
       margin-bottom: 24px;
+    }
+  }
+
+  .headings-1,
+  .headings-2,
+  .headings-3,
+  .headings-4 {
+    padding: 0 5px;
+    overflow: hidden;
+
+    h4 {
+      animation: fade 1s;
+    }
+
+    h4:not(:first-child) {
+      left: 5px;
     }
   }
 
   .headings-1 {
     .stroke {
       -webkit-text-stroke: 8px #4e55ff;
+    }
+  }
+
+  .hide {
+    p {
+      animation: fade 1.1s;
     }
   }
 
@@ -1032,5 +1068,16 @@
 .roadmap-img-arrow {
   @include m($lg) {
     display: none;
+  }
+}
+
+@keyframes fade {
+  from {
+    transform: translateY(200%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
