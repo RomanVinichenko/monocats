@@ -311,7 +311,7 @@ h5 {
   position: relative;
   margin-bottom: 24px;
   height: 100%;
-  min-height: fit-content;
+  min-height: 56px;
   color: $white;
 
   h4:not(:first-child),
@@ -473,6 +473,7 @@ h5 {
 #subscribe-img-inner-1 {
   right: -100px;
   top: -100px;
+  z-index: 2;
 
   @include m($xl) {
     max-width: 280px;
@@ -615,4 +616,12 @@ h5 {
 
 .hide {
   overflow: hidden;
+}
+
+.benefits-mobile {
+  display: none;
+
+  @include m($lg) {
+    display: block;
+  }
 }

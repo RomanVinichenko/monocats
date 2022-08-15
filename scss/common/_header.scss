@@ -51,7 +51,7 @@
 
       .header__buttons {
         @include m($lg) {
-          margin: 0 0 6vw;
+          margin: 0 0 8vw;
         }
       }
 
@@ -180,7 +180,7 @@
 
     .button {
       &:last-child {
-        margin-left: 18px;
+        margin-left: 25px;
       }
     }
   }
