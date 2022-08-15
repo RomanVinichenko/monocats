@@ -535,15 +535,15 @@
     </a>
   </div>
 </footer>
-<!--<div class="cookie">-->
-<!--  <p>We use our own cookies, as well as those of third parties, for individual as well as repeated sessions</p>-->
-<!--  <button class="button button&#45;&#45;white">-->
-<!--    <span>Accept cookies</span>-->
-<!--  </button>-->
-<!--  <div class="cookie__close">-->
-<!--    <img src="images/cookie-close.svg" alt="">-->
-<!--  </div>-->
-<!--</div>-->
+<div class="cookie" id="cookie">
+  <p>We use our own cookies, as well as those of third parties, for individual as well as repeated sessions</p>
+  <button class="button button--white">
+    <span>Accept cookies</span>
+  </button>
+  <div class="cookie__close">
+    <img src="images/cookie-close.svg" alt="">
+  </div>
+</div>
 <!--<div class="sent">-->
 <!--  <div class="sent__wrapper">-->
 <!--    <img class="sent__img" src="images/sent.png" alt="">-->
@@ -674,11 +674,11 @@
         rotate: [["elInY", "elOutY-500"], ["-45", "0"]],
       }
     });
-    lax.addElements(".hero__img", {
-      scrollY: {
-        translateY: [["elInY+300", "elOutY-800"], [0, "-150"]],
-      }
-    });
+    // lax.addElements(".hero__img", {
+    //   scrollY: {
+    //     translateY: [["elInY+300", "elOutY-800"], [0, "-300"]],
+    //   }
+    // });
     let myStr = localStorage.getItem('go-to-section');
     if(myStr != null){
       let myStr = localStorage.getItem('go-to-section');
@@ -733,6 +733,8 @@
     document.getElementById('cookie').classList.add('hide-cookie');
   }
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script>
   $( document ).ready(function() {

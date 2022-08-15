@@ -17,10 +17,12 @@
   &__img {
     position: absolute;
     right: 10%;
-    bottom: 0;
+    bottom: -9vw;
     z-index: 10;
+    opacity: 0;
     margin: 0 auto;
     width: 80%;
+    animation: hero 1s forwards;
   }
 
   .span-1 {
@@ -201,21 +203,25 @@
     }
   }
 
+  @include m(1400) {
+    height: 65vw;
+  }
+
   @include m($xl) {
     margin: 112px 24px 0;
     padding: 5% 0 0;
-    height: 60vw;
   }
 
   @include m($lg) {
     margin: 64px 17px 0;
     padding: 5% 0 0;
-    height: 70vw;
+    height: 70vh;
   }
 
   @include m($md) {
     margin: 64px 17px 0;
     padding: 5% 0 0;
+    height: 70vh;
   }
 
   @include m($sm) {
@@ -463,14 +469,19 @@
   }
 
   @include m($xl) {
+    margin: 250px auto 84px;
     padding: 80px 40px;
   }
 
   @include m($lg) {
-    margin: 0 auto 84px;
+    margin: 200px auto 84px;
     padding: 64px 32px;
     width: 95%;
     border-radius: 16px;
+  }
+
+  @include m($md) {
+    margin: 100px auto 84px;
   }
 }
 
