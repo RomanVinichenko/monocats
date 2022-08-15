@@ -4,11 +4,15 @@
   &__wrapper {
     position: relative;
     margin: 112px 24px 0;
-    min-height: 840px;
+    height: 80vh;
     border-radius: 32px;
     background-image: url("../images/home.svg");
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include m($lg) {
+      height: 80vh;
+    }
   }
 
   img {
@@ -16,27 +20,49 @@
     left: 50%;
     top: 0;
     margin: 0 auto;
-    transform: translateX(-50%);
+    transform: translate(-50%, -10%) scale(0.8);
+
+    @include m($xl) {
+      transform: translate(-50%, -10%) scale(0.6);
+    }
   }
 
-  h4 {
+  .headings {
     position: absolute;
     left: 50%;
-    bottom: 141px;
+    top: 70%;
     margin: 0 auto 16px;
+    height: fit-content;
     max-width: 452px;
+    font-size: 32px;
+    line-height: 32px;
     text-align: center;
-    -webkit-text-stroke: 2px $red-dark;
-    text-transform: uppercase;
-    color: $white;
     transform: translateX(-50%);
+
+    .stroke {
+      -webkit-text-stroke: 4px $red-dark;
+    }
+
+    h4 {
+      text-align: center;
+    }
+
+    @include m($lg) {
+      position: relative;
+      left: 0;
+      transform: translateX(0);
+    }
   }
 
   .header__buttons {
     position: absolute;
     left: 50%;
-    bottom: 71px;
+    bottom: 6%;
     transform: translateX(-50%);
+
+    .button {
+      margin: 0;
+    }
   }
 
   .button {
