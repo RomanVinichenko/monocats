@@ -60,10 +60,6 @@
       color: $green-dark;
     }
 
-    &:hover {
-      transform: scale(1);
-    }
-
     @include m($xl) {
       right: 10%;
       transform: scale(0.9) translateX(50%);
