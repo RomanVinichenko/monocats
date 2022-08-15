@@ -270,9 +270,14 @@
 
   .headings-title {
     margin-bottom: 32px;
+    overflow: hidden;
 
     .stroke {
       -webkit-text-stroke: 8px $green-dark;
+    }
+
+    h2 {
+      animation: fade 0.8s;
     }
 
     @include m($lg) {
@@ -305,6 +310,16 @@
     padding: 64px 32px;
     width: 95%;
     border-radius: 16px;
+  }
+
+  @keyframes fade {
+    from {
+      transform: translateY(200%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
   }
 }
 
