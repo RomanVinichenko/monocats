@@ -65,6 +65,7 @@
 </header>
 <main class="main">
   <section class="hero">
+    <img class="hero__img" src="images/home.png" alt="Home img">
     <span class="span-1"></span>
     <span class="span-2"></span>
     <span class="span-3"></span>
@@ -78,7 +79,6 @@
       <h1>Mono Cats is a blockchain game IP by Mono Labs</h1>
       <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
         velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-      <img class="hero__img" src="images/home.png" alt="Home img">
     </div>
     <a class="scroll-down go-link" href="#story">
       <img src="images/arrow.svg" alt="">
@@ -727,16 +727,6 @@
       menuMobile.classList.toggle('menu__bunch--active');
     });
   }
-
-  document.querySelectorAll('.go-link').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-
 </script>
 <script src="js/wow.min.js"></script>
 <script>
