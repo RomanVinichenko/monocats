@@ -11,6 +11,7 @@
     justify-content: space-between;
     padding: 0 48px;
     width: 100%;
+    animation: fade 1s;
 
     .button--white {
       height: 36px;
@@ -88,6 +89,7 @@
     z-index: -1;
     margin: 0 auto 92px;
     width: fit-content;
+    animation: fade 1s forwards;
 
     @include m($xl) {
       margin: 0 auto 70px;
@@ -123,19 +125,20 @@
 
   .headings-title {
     margin-bottom: 32px;
+    overflow: hidden;
     text-align: center;
 
-    .stroke {
-      -webkit-text-stroke: 8px $green-dark;
-    }
-
     h2:not(:first-child) {
-      left: 50%;
-      transform: translateX(-50%);
+      margin: 0 auto;
     }
 
     h2 {
       min-width: max-content;
+      animation: fade 1s forwards;
+    }
+
+    .stroke {
+      -webkit-text-stroke: 8px $green-dark;
     }
 
     @include m($lg) {
@@ -149,6 +152,7 @@
     width: 100%;
     max-width: 548px;
     text-align: center;
+    animation: fade 1s forwards;
 
     @include m($lg) {
       margin: 0 auto 24px;
@@ -158,6 +162,8 @@
   .team__social {
     z-index: 10;
     justify-content: center;
+    padding: 10px 0;
+    animation: fade 1s forwards;
   }
 
   .team__social-link {
