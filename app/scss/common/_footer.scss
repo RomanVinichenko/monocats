@@ -11,6 +11,7 @@
     justify-content: space-between;
     padding: 0 48px;
     width: 100%;
+    animation: fade 1s;
 
     .button--white {
       height: 36px;
@@ -84,6 +85,12 @@
     }
   }
 
+  .hide {
+    .wow {
+      animation: fade 1s  forwards;
+    }
+  }
+
   &__img {
     z-index: -1;
     margin: 0 auto 92px;
@@ -123,15 +130,19 @@
 
   .headings-title {
     margin-bottom: 32px;
+    overflow: hidden;
     text-align: center;
+
+    h2:not(:first-child) {
+      margin: 0 auto;
+    }
+
+    h2 {
+      animation: fade 1s;
+    }
 
     .stroke {
       -webkit-text-stroke: 8px $green-dark;
-    }
-
-    h2:not(:first-child) {
-      left: 50%;
-      transform: translateX(-50%);
     }
 
     h2 {
@@ -158,6 +169,7 @@
   .team__social {
     z-index: 10;
     justify-content: center;
+    padding: 10px 0;
   }
 
   .team__social-link {
