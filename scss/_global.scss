@@ -412,6 +412,8 @@ h5 {
     }
 
     img {
+      max-width: 282px;
+
       @include m(1400) {
         max-width: 200px;
       }
