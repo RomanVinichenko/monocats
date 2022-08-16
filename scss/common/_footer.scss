@@ -25,6 +25,10 @@
         height: 36px;
         background-color: $brown-light;
       }
+
+      &:hover::before {
+        background-color: #ffdea5;
+      }
     }
 
     .button {
@@ -118,8 +122,9 @@
   }
 
   &__bg-mobile {
+    z-index: -1;
     display: none;
-    transform: scale(1.3);
+    transform: scale(1.3) translateY(15%);
 
     @include m($sm) {
       display: block;
@@ -180,6 +185,10 @@
 
       &::after {
         background-color: $beige-light;
+      }
+
+      &:hover::after {
+        background-color: #ffdea5;
       }
     }
   }
