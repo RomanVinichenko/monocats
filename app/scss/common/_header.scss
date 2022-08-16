@@ -14,6 +14,9 @@
   transition: border 0.3s;
 
   .logo {
+    opacity: 0;
+    animation: fade 0.8s forwards;
+
     @include m($xl) {
       max-width: 200px;
     }
@@ -29,6 +32,7 @@
     justify-content: space-between;
     padding: 0 40px;
     height: 100%;
+    overflow: hidden;
 
     &__bunch {
       display: flex;
@@ -56,7 +60,9 @@
       }
 
       ul {
+        opacity: 0;
         margin: 0 auto;
+        animation: fade 0.8s 0.25s forwards;
 
         li {
           &::after {
@@ -177,6 +183,8 @@
 
   &__buttons {
     display: flex;
+    opacity: 0;
+    animation: fade 0.8s 0.2s forwards;
 
     .button {
       &:last-child {
@@ -193,6 +201,7 @@
     outline: none;
     border: none;
     background-color: transparent;
+    animation: fade 1s forwards;
     cursor: pointer;
 
     .burger__close,

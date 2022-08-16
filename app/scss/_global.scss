@@ -267,7 +267,12 @@ h5 {
     border: 1px solid #c4c5c6;
     border-radius: 16px;
     background-color: $white;
+    transition: all 0.3s;
     cursor: pointer;
+
+    &:hover {
+      background-color: #fbefd6;
+    }
 
     @include m($md) {
       right: 50%;
@@ -617,7 +622,12 @@ h5 {
     height: 48px;
     border-radius: 16px;
     background-color: $white;
+    transition: all 0.3s;
     cursor: pointer;
+
+    &:hover {
+      background-color: #fbefd6;
+    }
 
     @include m($md) {
       right: 50%;
