@@ -1,8 +1,8 @@
 .hero {
   position: relative;
   margin: 110px 24px 0;
-  padding: 5% 0 0;
-  height: 50vw;
+  padding: 7% 0 0;
+  height: 45vw;
   overflow: hidden;
   border-radius: 32px;
   background-color: $red-light;
@@ -44,6 +44,11 @@
     background-image: radial-gradient(217.68% 217.68% at 27.97% 49.05%, #5ac2fd 0%, #5ab8fd 100%);
     filter: blur(100px);
     animation: circle1 8s linear infinite;
+
+    @include m($sm) {
+      top: 0;
+      filter: blur(60px);
+    }
   }
 
   .span-2 {
@@ -57,12 +62,17 @@
     background-image: radial-gradient(158.99% 50% at 50% 50%, #816cff 0%, rgba(115, 92, 255, 0.37) 100%);
     filter: blur(100px);
     animation: circle2 8s linear infinite;
+
+    @include m($sm) {
+      top: 0;
+      filter: blur(60px);
+    }
   }
 
   .span-3 {
     position: absolute;
     left: 0;
-    bottom: -10%;
+    bottom: -35%;
     display: block;
     width: 800px;
     height: 800px;
@@ -70,12 +80,21 @@
     background-color: #ffdea5;
     filter: blur(100px);
     animation: circle3 8s linear infinite;
+
+    @include m($md) {
+      bottom: -10%;
+    }
+
+    @include m($sm) {
+      bottom: 0;
+      filter: blur(60px);
+    }
   }
 
   .span-4 {
     position: absolute;
     right: 0;
-    bottom: -10%;
+    bottom: -35%;
     display: block;
     width: 800px;
     height: 800px;
@@ -83,6 +102,30 @@
     background-color: #cbee99;
     filter: blur(100px);
     animation: circle4 8s linear infinite;
+
+    @include m($md) {
+      bottom: -10%;
+    }
+
+    @include m($sm) {
+      bottom: 0;
+      filter: blur(60px);
+    }
+  }
+
+  .span-1,
+  .span-2,
+  .span-3,
+  .span-4 {
+    @include m($xl) {
+      width: 600px;
+      height: 600px;
+    }
+
+    @include m($md) {
+      width: 400px;
+      height: 400px;
+    }
   }
 
   &__rotate {
@@ -217,24 +260,24 @@
 
   @include m($xl) {
     margin: 112px 24px 0;
-    padding: 5% 0 0;
+    padding: 7% 0 0;
     height: 58vw;
   }
 
   @include m($lg) {
     margin: 64px 17px 0;
-    padding: 5% 0 0;
-    height: 70vh;
+    padding: 7% 0 0;
+    height: 77vh;
   }
 
   @include m($md) {
     margin: 64px 17px 0;
-    padding: 5% 0 0;
+    padding: 7% 0 0;
     height: 70vh;
   }
 
   @include m($sm) {
-    padding: 5% 0 0;
+    padding: 7% 0 0;
   }
 
   @keyframes hero {
@@ -255,15 +298,15 @@
     }
 
     25% {
-      transform: translateX(10%) translateY(0);
+      transform: translateX(15%) translateY(0);
     }
 
     50% {
-      transform: translateX(10%) translateY(-10%);
+      transform: translateX(15%) translateY(-15%);
     }
 
     75% {
-      transform: translateX(0) translateY(-10%);
+      transform: translateX(0) translateY(-15%);
     }
 
     100% {
@@ -277,15 +320,15 @@
     }
 
     25% {
-      transform: translateX(10%) translateY(-10%);
+      transform: translateX(15%) translateY(-15%);
     }
 
     50% {
-      transform: translateX(0) translateY(-10%);
+      transform: translateX(0) translateY(-15%);
     }
 
     75% {
-      transform: translateX(10%) translateY(-10%);
+      transform: translateX(15%) translateY(-15%);
     }
 
     100% {
@@ -299,15 +342,15 @@
     }
 
     25% {
-      transform: translateX(0) translateY(10%);
+      transform: translateX(0) translateY(15%);
     }
 
     50% {
-      transform: translateX(-10%) translateY(0);
+      transform: translateX(-15%) translateY(0);
     }
 
     75% {
-      transform: translateX(10%) translateY(-10%);
+      transform: translateX(15%) translateY(-15%);
     }
 
     100% {
@@ -325,11 +368,11 @@
     }
 
     50% {
-      transform: translateX(10%) translateY(10%);
+      transform: translateX(15%) translateY(15%);
     }
 
     75% {
-      transform: translateX(-10) translateY(-10%);
+      transform: translateX(-15) translateY(-15%);
     }
 
     100% {
@@ -761,6 +804,13 @@
           top: -20%;
           width: 100%;
           max-width: 140px;
+        }
+
+        @include m($sm) {
+          left: auto;
+          right: -10%;
+          top: -10%;
+          max-width: 120px;
         }
       }
     }
