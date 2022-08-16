@@ -26,7 +26,7 @@ h4 {
 
 h1 {
   font-weight: 400;
-  font-size: 80px;
+  font-size: 70px;
   line-height: 72px;
   letter-spacing: normal;
 
@@ -150,6 +150,12 @@ h5 {
   &::after {
     background-color: $green-dark;
   }
+
+  &:hover {
+    &::before {
+      background-color: #aad869;
+    }
+  }
 }
 
 .button--red {
@@ -161,6 +167,12 @@ h5 {
 
   &::after {
     background-color: $red-dark;
+  }
+
+  &:hover {
+    &::before {
+      background-color: #f59873;
+    }
   }
 }
 
@@ -214,12 +226,13 @@ h5 {
     transition: all 0.2s;
   }
 
-  &:hover::after {
-    left: 4px;
-    top: 4px;
-  }
-
   &:hover {
+    &::after {
+      left: 4px;
+      top: 4px;
+      background-color: #ffdea5;
+    }
+
     img {
       transform: translate(4px, 4px);
     }
@@ -533,7 +546,7 @@ h5 {
   position: absolute;
 }
 
-.sent {
+.rv-sent {
   position: fixed;
   left: 0;
   right: 0;
