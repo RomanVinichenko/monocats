@@ -50,7 +50,20 @@
   }
 }
 
+@keyframes terms {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .terms-block {
+  opacity: 0;
+  animation: terms 1.2s forwards;
+
   .footer__terms {
     position: absolute;
     left: 0;
