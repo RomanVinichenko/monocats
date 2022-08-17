@@ -433,7 +433,7 @@
 
   @include m($lg) {
     margin: 100px auto 84px;
-    padding: 64px 32px;
+    padding: 64px 28px;
     width: 95%;
     border-radius: 16px;
   }
@@ -594,17 +594,17 @@
   .headings-2,
   .headings-3,
   .headings-4 {
-    padding: 5px 0 0 5px;
+    padding: 5px;
     min-height: 32px;
     overflow: hidden;
 
     h4 {
+      width: 100%;
       animation: fade 1s;
     }
 
     h4:not(:first-child) {
-      left: 5px;
-      top: 5px;
+      padding: 5px;
     }
   }
 
@@ -1276,13 +1276,11 @@
 
   .headings-title {
     margin-bottom: 8px;
-    padding-top: 5px;
-    padding-left: 5px;
+    padding: 5px;
     overflow: hidden;
 
     h2:not(:first-child) {
-      left: 5px;
-      top: 5px;
+      padding: 5px;
     }
 
     h2 {
@@ -1349,7 +1347,7 @@
 
   @include m($lg) {
     margin: 0 auto 84px;
-    padding: 64px 32px;
+    padding: 64px 28px;
     border-radius: 16px;
   }
 }

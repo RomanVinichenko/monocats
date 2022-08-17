@@ -45,6 +45,12 @@
     margin: 0 auto;
     width: 100%;
     text-align: center;
+    animation: fade-team 1s;
+
+    .header__buttons {
+      opacity: 1;
+      animation: none;
+    }
 
     @include m($xl) {
       position: relative;
