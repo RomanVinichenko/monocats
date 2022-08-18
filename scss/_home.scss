@@ -2,53 +2,56 @@
   position: relative;
   margin: 110px 24px 0;
   padding: 5% 0 0;
-  min-height: 50vw;
+  height: 90vh;
   overflow: hidden;
   border-radius: 32px;
   background-color: $red-light;
 
   &__wrapper {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
-  &__img {
-    position: absolute;
-    right: 10%;
-    bottom: -9vw;
-    z-index: 10;
-    display: block;
-    opacity: 0;
-    margin: 0 auto;
-    width: 80%;
-    object-fit: cover;
-    animation: hero 1s forwards;
-
-    @include m($md) {
-      right: 0;
-      width: 100%;
-      height: 55vw;
+    @include m($lg) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
     }
   }
 
-  //@keyframes cats {
-  //  from {
-  //    opacity: 0;
-  //    bottom: -20vw;
-  //  }
-  //
-  //  to {
-  //    opacity: 1;
-  //    bottom: -9vw;
-  //  }
-  //}
+  &__img {
+    opacity: 0;
+    margin: 0 auto;
+    width: 80%;
+    animation: hero 1s forwards;
+
+    img {
+      object-fit: cover;
+    }
+
+    @include m($xl) {
+      margin: 4% auto 0;
+    }
+
+    @include m($lg) {
+      margin: auto auto -5%;
+      width: 100%;
+    }
+
+    @include m($md) {
+      img {
+        transform: scale(1.4);
+      }
+    }
+
+    @include m(590) {
+      margin: auto auto 3%;
+    }
+  }
 
   &__rotate {
     position: absolute;
     right: 20%;
-    top: 55%;
+    top: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,8 +109,12 @@
 
     @include m($lg) {
       right: 50%;
-      top: 100%;
+      top: 30%;
       transform: scale(0.7) translateX(70%);
+    }
+
+    @include m($sm) {
+      top: 47%;
     }
   }
 
@@ -115,7 +122,7 @@
     position: relative;
     z-index: 5;
     opacity: 0;
-    margin-bottom: 28px;
+    margin: 0 auto 28px;
     max-width: 996px;
     text-align: center;
     color: $white;
@@ -155,6 +162,7 @@
 
   p {
     opacity: 0;
+    margin: 0 auto;
     max-width: 494px;
     text-align: center;
     color: $white;
@@ -171,30 +179,21 @@
     }
   }
 
-  @include m(1700) {
-    height: 50vw;
-  }
-
-  @include m(1400) {
-    height: 55vw;
-  }
-
   @include m($xl) {
     margin: 112px 24px 0;
     padding: 5% 0 0;
-    height: 58vw;
+    height: 80vh;
   }
 
   @include m($lg) {
     margin: 64px 17px 0;
     padding: 5% 0 0;
-    height: 77vh;
+    height: 85vh;
   }
 
   @include m($md) {
     margin: 64px 17px 0;
     padding: 5% 0 0;
-    height: 70vh;
   }
 
   @include m($sm) {
@@ -204,7 +203,7 @@
   @keyframes hero {
     from {
       opacity: 0;
-      transform: translateY(120%);
+      transform: translateY(100%);
     }
 
     to {
