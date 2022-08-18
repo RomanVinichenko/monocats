@@ -13,20 +13,6 @@
   background-color: $white;
   transition: border 0.3s;
 
-  .logo {
-    opacity: 0;
-    width: 100%;
-    animation: fade 0.8s forwards;
-
-    @include m($xl) {
-      max-width: 200px;
-    }
-
-    @include m($lg) {
-      max-width: 144px;
-    }
-  }
-
   .menu {
     display: flex;
     align-items: center;
@@ -34,6 +20,19 @@
     padding: 0 40px;
     height: 100%;
     overflow: hidden;
+
+    &__logo {
+      opacity: 0;
+      animation: fade 0.8s forwards;
+
+      @include m($xl) {
+        max-width: 240px;
+      }
+
+      @include m($lg) {
+        max-width: 190px;
+      }
+    }
 
     &__bunch {
       display: flex;
