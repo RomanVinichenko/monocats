@@ -25,6 +25,7 @@
     animation: hero 1s forwards;
 
     img {
+      width: 100%;
       object-fit: cover;
     }
 
@@ -1516,15 +1517,11 @@
 }
 
 .wpcf7-not-valid {
-  border: 2px solid #cb0000;
+  border: 2px solid #cb0000 !important;
 }
 
 .wpcf7-not-valid-tip {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 20px;
-  letter-spacing: -0.04em;
-  color: #cb0000;
+  color: #cb0000 !important;
 }
 
 @keyframes rotate-appear {
