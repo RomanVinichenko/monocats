@@ -55,11 +55,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
     width: 160px;
     height: 160px;
     overflow: hidden;
     border-radius: 50%;
     transform: scale(0.9) translateX(50%);
+    animation: rotate-appear 1.8s forwards;
 
     &::before {
       content: "";
@@ -357,7 +359,9 @@
 
     @include m(600) {
       display: block;
+      opacity: 0;
       margin-top: 16px;
+      animation: rota-img 1.2s forwards;
     }
   }
 
@@ -455,6 +459,18 @@
 
   @include m($md) {
     margin: 80px auto 84px;
+  }
+
+  @keyframes rota-img {
+    from {
+      opacity: 0;
+      transform: translateY(100%) rotate(45deg);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) rotate(0);
+    }
   }
 }
 
@@ -1496,5 +1512,31 @@
   @include m($md) {
     width: 400px;
     height: 400px;
+  }
+}
+
+.wpcf7-not-valid {
+  border: 2px solid #cb0000;
+}
+
+.wpcf7-not-valid-tip {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: -0.04em;
+  color: #cb0000;
+}
+
+@keyframes rotate-appear {
+  0% {
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
