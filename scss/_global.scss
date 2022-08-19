@@ -1,6 +1,6 @@
 body {
   overflow-x: hidden;
-  font-family: "Poppins-600", sans-serif;
+  font-family: Poppins-600, sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -11,35 +11,44 @@ body {
 
 @font-face {
   src:
+    local("Luckiest Guy"),
     url("../fonts/LuckiestGuy-Regular.ttf") format("ttf"),
     url("../fonts/LuckiestGuy-Regular.woff") format("woff"),
     url("../fonts/LuckiestGuy-Regular.woff2") format("woff2"),
     url("../fonts/LuckiestGuy-Regular.eot") format("eot"),
     url("../fonts/LuckiestGuy-Regular.svg") format("svg");
-  font-family: "LuckiestGuy", cursive;
+  font-family: LuckiestGuy;
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   src:
+    local("Poppins"),
     url("../fonts/Poppins-Regular.ttf") format("ttf"),
     url("../fonts/Poppins-Regular.woff") format("woff"),
     url("../fonts/Poppins-Regular.woff2") format("woff2"),
     url("../fonts/Poppins-Regular.eot") format("eot"),
     url("../fonts/Poppins-Regular.svg") format("svg");
-  font-family: "Poppins-400", sans-serif;
+  font-family: Poppins-400;
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   src:
+    local("Poppins"),
     url("../fonts/Poppins-SemiBold.ttf") format("ttf"),
     url("../fonts/Poppins-SemiBold.woff") format("woff"),
     url("../fonts/Poppins-SemiBold.woff2") format("woff2"),
     url("../fonts/Poppins-SemiBold.eot") format("eot"),
     url("../fonts/Poppins-SemiBold.svg") format("svg");
-  font-family: "Poppins-600", sans-serif;
+  font-family: Poppins-600;
   font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 .container {
@@ -54,7 +63,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "LuckiestGuy", cursive;
+  font-family: LuckiestGuy, cursive;
   font-weight: 400;
 }
 
