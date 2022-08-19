@@ -551,6 +551,7 @@ h5 {
 
 .wpcf7-spinner {
   position: absolute;
+  bottom: -40px;
 }
 
 .rv-sent {
@@ -646,7 +647,24 @@ h5 {
 .benefits-mobile {
   display: none;
 
+  .benefits__box {
+    opacity: 0;
+    animation: benefits 1s forwards;
+  }
+
   @include m($lg) {
     display: block;
+  }
+}
+
+@keyframes benefits {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
