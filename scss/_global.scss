@@ -13,7 +13,9 @@ body {
   src:
     url("../fonts/LuckiestGuy-Regular.ttf") format("ttf"),
     url("../fonts/LuckiestGuy-Regular.woff") format("woff"),
-    url("../fonts/LuckiestGuy-Regular.woff2") format("woff2");
+    url("../fonts/LuckiestGuy-Regular.woff2") format("woff2"),
+    url("../fonts/LuckiestGuy-Regular.eot") format("eot"),
+    url("../fonts/LuckiestGuy-Regular.svg") format("svg");
   font-family: "LuckiestGuy";
   font-weight: 400;
 }
@@ -22,7 +24,9 @@ body {
   src:
     url("../fonts/Poppins-Regular.ttf") format("ttf"),
     url("../fonts/Poppins-Regular.woff") format("woff"),
-    url("../fonts/Poppins-Regular.woff2") format("woff2");
+    url("../fonts/Poppins-Regular.woff2") format("woff2"),
+    url("../fonts/Poppins-Regular.eot") format("eot"),
+    url("../fonts/Poppins-Regular.svg") format("svg");
   font-family: "Poppins-400";
   font-weight: 400;
 }
@@ -31,7 +35,9 @@ body {
   src:
     url("../fonts/Poppins-SemiBold.ttf") format("ttf"),
     url("../fonts/Poppins-SemiBold.woff") format("woff"),
-    url("../fonts/Poppins-SemiBold.woff2") format("woff2");
+    url("../fonts/Poppins-SemiBold.woff2") format("woff2"),
+    url("../fonts/Poppins-SemiBold.eot") format("eot"),
+    url("../fonts/Poppins-SemiBold.svg") format("svg");
   font-family: "Poppins-600";
   font-weight: 600;
 }
